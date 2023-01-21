@@ -1,14 +1,14 @@
 pipeline {
  agent{
    label{
-         label"build-in"
+         label "build-in"
          customWorkspace "/mnt/myproject"
         }
      }
 stages{
    stage("deploy"){
      steps{
-           sh "cp -r index.html/var/www/html" 
+           sh "cp -r index.html /var/www/html" 
            sh "chmod -R 777 /var/www/index.html"
           }
      }
